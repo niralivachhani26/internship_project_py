@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+    banners = [
+        {'image_url': 'images/banner1.png'},
+        {'image_url': 'images/banner2.png'},
+        {'image_url': 'images/banner3.png'},
+    ]
+    return render(request, 'index.html', {'banners': banners})
 
 def about(request):
     return render(request, 'about.html')

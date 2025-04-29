@@ -77,3 +77,85 @@ body {
 .content{
     padding:20px 40px;
 }
+.slider-container {
+    width: 100%;      /* Full width of the viewport */
+    height: 100vh;     /* Full height of the viewport */
+    overflow: hidden;  /* Prevent manual scrolling */
+}
+.slider {
+    display: flex;
+    width: 100%;
+    animation: slide 15s infinite;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 100px 50px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;  /* Vertically centers the content */
+    align-items: center;      /* Horizontally centers the content */
+    text-align: center; 
+}
+
+.overlay h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.overlay h1 {
+    font-size: 5em;
+    line-height: 1.2;
+}
+
+.overlay h1 span {
+    color: orange;
+}
+
+.overlay p {
+    max-width: 700px;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: orange;
+    color: white;
+    padding: 12px 25px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: darkorange;
+}
+
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    33%, 53% { transform: translateX(-100vw); }
+    66%, 86% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
+}
+
